@@ -84,8 +84,6 @@ public class OnnmyoujiSpider {
         String getWay = selects.get(5).text();
         String image = doc.select("table").get(0).select("tr").get(0).select("img").attr("src");
         return new ShikigamiModel(name, image, seiyou, sex, star, getWay, level, "");
-
-
     }
 
 }
