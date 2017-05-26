@@ -38,7 +38,7 @@ public class ShikigamaServiceImpl implements ShikigamaService {
         ShikigamiModel shikigamiModel = dao.findByName(model.getName());
         if (shikigamiModel == null) {
             dao.save(model);
-            LOGGER.debug("插入数据:{}", JSON.toJSONString(model));
+            LOGGER.info("插入数据:{}", JSON.toJSONString(model));
         }
     }
 

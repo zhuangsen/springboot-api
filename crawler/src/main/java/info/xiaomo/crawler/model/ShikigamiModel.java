@@ -14,11 +14,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "shikigame")
 // lomlok
-@Data
+@Data //注解在类上；提供类所有属性的 getting 和 setting 方法，此外还提供了equals、canEqual、hashCode、toString 方法
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
-@AllArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor //注解在类上；为类提供一个全参的构造方法
+@NoArgsConstructor //注解在类上；为类提供一个无参的构造方法
 public class ShikigamiModel extends BaseModel {
 
     /**
@@ -63,7 +63,4 @@ public class ShikigamiModel extends BaseModel {
      * 描述
      */
     private String des;
-
-
-
 }

@@ -31,7 +31,7 @@ public class ScheduledTasks {
     }
 
 
-    @Scheduled(fixedRate = 1000 * 30)
+//    @Scheduled(fixedRate = 1000 * 30)
     public void reportCurrentTime() {
         System.out.println("Scheduling Tasks Examples: The time is now " + dateFormat().format(new Date()));
     }
@@ -39,21 +39,21 @@ public class ScheduledTasks {
     //每1分钟执行一次
     @Scheduled(cron = "0 */1 *  * * * ")
     public void reportCurrentByCron() {
-        LOGGER.debug("开始执行任务：");
+        LOGGER.info("开始执行reportCurrent任务：");
         List<ShikigamiModel> shikigamiModel = OnnmyoujiSpider.getShikigamiModel();
         for (ShikigamiModel model : shikigamiModel) {
             shikigamaService.save(model);
         }
     }
 
-    @Scheduled(fixedRate = 1000)
+    @Scheduled(fixedRate = 2000)
     public void downImage() throws Exception {
-        LOGGER.debug("开始执行任务：");
+        LOGGER.info("开始执行downImage任务：");
         List<ShikigamiModel> shikigamiModel = shikigamaService.findAll();
         for (ShikigamiModel aShikigamiModel : shikigamiModel) {
             String url = aShikigamiModel.getImage();
-            DownUtil.download(url, "C:\\Users\\xiaomo\\Desktop\\yss\\");
-            LOGGER.debug("开始下载图片:{}", url);
+            DownUtil.download(url, "/Users/madison/Pictures/");
+            LOGGER.info("开始下载图片:{}", url);
         }
     }
 
