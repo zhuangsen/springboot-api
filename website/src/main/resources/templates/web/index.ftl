@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="icon" href="${webSet.icon}">
     <title>${webSet.siteName}</title>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -48,8 +48,6 @@
                 </li>
             </ul>
         </#if>
-
-
         </div>
     </nav>
 </div>

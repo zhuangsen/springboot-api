@@ -12,11 +12,11 @@ import org.springframework.context.annotation.Configuration;
  * いま 最高の表現 として 明日最新の始発．．～
  * Today the best performance  as tomorrow newest starter!
  * Created by IntelliJ IDEA.
- *
+ * <p>
  * author: xiaomo
  * github: https://github.com/xiaomoinfo
  * email: xiaomo@xiaomo.info
-
+ * <p>
  * Date: 2016/4/1 15:38
  * Description: RabbitMq启动器
  * Copyright(©) 2015 by xiaomo.
@@ -29,7 +29,4 @@ public class AsyncMain {
     public static void main(String[] args) throws Exception {
         SpringApplication.run(AsyncMain.class, args);
     }
-
-
-
 }

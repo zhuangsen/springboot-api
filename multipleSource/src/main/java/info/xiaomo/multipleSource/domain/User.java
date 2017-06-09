@@ -5,6 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "USER")
 @Data
 @ToString(callSuper = false)
 @NoArgsConstructor

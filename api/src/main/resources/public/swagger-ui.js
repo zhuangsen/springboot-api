@@ -108,7 +108,7 @@ templates['content_type'] = template({"1":function(container,depth0,helpers,part
     + ((stack1 = (helpers.sanitize || (depth0 && depth0.sanitize) || alias2).call(alias1,depth0,{"name":"sanitize","hash":{},"data":data})) != null ? stack1 : "")
     + "</option>\n";
 },"4":function(container,depth0,helpers,partials,data) {
-    return "  <option value=\"application/json\">application/json</option>\n";
+    return "  <option value=\"application/jsontest\">application/jsontest</option>\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing;
 
@@ -630,7 +630,7 @@ templates['parameter_content_type'] = template({"1":function(container,depth0,he
     + ((stack1 = (helpers.sanitize || (depth0 && depth0.sanitize) || alias2).call(alias1,depth0,{"name":"sanitize","hash":{},"data":data})) != null ? stack1 : "")
     + "</option>\n";
 },"4":function(container,depth0,helpers,partials,data) {
-    return "  <option value=\"application/json\">application/json</option>\n";
+    return "  <option value=\"application/jsontest\">application/jsontest</option>\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing;
 
@@ -699,7 +699,7 @@ templates['response_content_type'] = template({"1":function(container,depth0,hel
     + ((stack1 = (helpers.sanitize || (depth0 && depth0.sanitize) || alias2).call(alias1,depth0,{"name":"sanitize","hash":{},"data":data})) != null ? stack1 : "")
     + "</option>\n";
 },"4":function(container,depth0,helpers,partials,data) {
-    return "  <option value=\"application/json\">application/json</option>\n";
+    return "  <option value=\"application/jsontest\">application/jsontest</option>\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
@@ -20300,7 +20300,7 @@ function parseHeader(str) {
 }
 
 /**
- * Check if `mime` is json or has +json structured syntax suffix.
+ * Check if `mime` is jsontest or has +jsontest structured syntax suffix.
  *
  * @param {String} mime
  * @return {Boolean}
@@ -20657,14 +20657,14 @@ Request.prototype.responseType = function(val){
  *
  * Examples:
  *
- *      superagent.types.json = 'application/json';
+ *      superagent.types.jsontest = 'application/jsontest';
  *
  *      request.get('/agent')
- *        .accept('json')
+ *        .accept('jsontest')
  *        .end(callback);
  *
  *      request.get('/agent')
- *        .accept('application/json')
+ *        .accept('application/jsontest')
  *        .end(callback);
  *
  * @param {String} accept
@@ -21193,12 +21193,12 @@ exports.getHeader = exports.get;
  * Examples:
  *
  *      req.get('/')
- *        .set('Accept', 'application/json')
+ *        .set('Accept', 'application/jsontest')
  *        .set('X-API-Key', 'foobar')
  *        .end(callback);
  *
  *      req.get('/')
- *        .set({ Accept: 'application/json', 'X-API-Key': 'foobar' })
+ *        .set({ Accept: 'application/jsontest', 'X-API-Key': 'foobar' })
  *        .end(callback);
  *
  * @param {String|Object} field
@@ -21348,18 +21348,18 @@ exports._isHost = function _isHost(obj) {
 };
 
 /**
- * Send `data` as the request body, defaulting the `.type()` to "json" when
+ * Send `data` as the request body, defaulting the `.type()` to "jsontest" when
  * an object is given.
  *
  * Examples:
  *
- *       // manual json
+ *       // manual jsontest
  *       request.post('/user')
- *         .type('json')
+ *         .type('jsontest')
  *         .send('{"name":"tj"}')
  *         .end(callback)
  *
- *       // auto json
+ *       // auto jsontest
  *       request.post('/user')
  *         .send({ name: 'tj' })
  *         .end(callback)

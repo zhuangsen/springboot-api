@@ -85,6 +85,8 @@ public class ApiMain {
                 .termsOfServiceUrl("https://xiaomo.info/")
                 .contact("小莫")
                 .version("1.0")
+                .license("madison")
+                .licenseUrl("zhuangsen.io")
                 .build();
     }
 
